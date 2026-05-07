@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="description" content="Holistic health solutions include herbs, tinctures, oils, and energy healing services. Embrace wellness with Divine Healn's incredible offerings." />
+  <title>Divine Healn: Holistic Health Products and Healing Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f5f0e8;
+      --sage: #7a8c6e;
+      --deep-green: #2d3e2f;
+      --warm-brown: #8b6347;
+      --gold: #c9a84c;
+      --light-sage: #d4ddc8;
+      --text-dark: #1e2b20;
+      --text-mid: #4a5e4c;
+      --white: #fff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(122,140,110,0.2);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.8rem; text-decoration: none;
+    }
+    .nav-logo img {
+      width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+    }
+    .nav-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 600;
+      color: var(--deep-green);
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--text-mid);
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--sage); }
+    .nav-cta {
+      background: var(--deep-green); color: var(--cream);
+      border: none; padding: 0.6rem 1.5rem;
+      font-family: 'Jost', sans-serif; font-size: 0.8rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.3s;
+      text-decoration: none;
+    }
+    .nav-cta:hover { background: var(--sage); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      background:
+        linear-gradient(160deg, rgba(45,62,47,0.06) 0%, transparent 60%),
+        var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -20%; right: -10%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(122,140,110,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--sage); margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 300; line-height: 1.05;
+      color: var(--deep-green);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 strong { font-weight: 600; font-style: italic; }
+    .hero p {
+      font-size: 1.05rem; color: var(--text-mid);
+      max-width: 480px; margin: 0 auto 2.5rem;
+      line-height: 1.7; font-weight: 300;
+    }
+    .btn-primary {
+      background: var(--deep-green); color: var(--cream);
+      padding: 0.9rem 2.5rem; text-decoration: none;
+      font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--warm-brown); transform: translateY(-2px); }
+
+    /* VIDEO SECTION */
+    .video-section {
+      padding: 5rem 4rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      align-items: center;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .video-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 400; color: var(--deep-green);
+      margin-bottom: 1.5rem; line-height: 1.2;
+    }
+    .video-section p {
+      color: var(--text-mid); line-height: 1.8; font-weight: 300;
+      margin-bottom: 1rem; font-size: 0.95rem;
+    }
+    .video-wrapper {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      border-radius: 2px;
+      box-shadow: 0 20px 60px rgba(45,62,47,0.15);
+    }
+    .video-wrapper iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
+    }
+
+    /* GALLERY */
+    .gallery {
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 220px 220px;
+      gap: 12px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .gallery-item { overflow: hidden; }
+    .gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* TICKER */
+    .ticker {
+      background: var(--deep-green); color: var(--cream);
+      padding: 0.9rem 0; overflow: hidden;
+      font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .ticker-inner {
+      display: flex; gap: 3rem; white-space: nowrap;
+      animation: ticker 20s linear infinite;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      padding: 6rem 4rem;
+      background: var(--deep-green);
+      text-align: center;
+    }
+    .testimonials h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; font-weight: 300; color: var(--cream);
+      margin-bottom: 3rem; font-style: italic;
+    }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.06);
+      padding: 2rem;
+      border: 1px solid rgba(245,240,232,0.12);
+      text-align: left;
+    }
+    .testimonial-card p {
+      color: rgba(245,240,232,0.8); font-size: 0.9rem;
+      line-height: 1.7; font-weight: 300; margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .testimonial-author img {
+      width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+      border: 1px solid rgba(201,168,76,0.4);
+    }
+    .testimonial-author strong {
+      color: var(--gold); font-size: 0.8rem; letter-spacing: 0.05em;
+    }
+
+    /* FAQ */
+    .faq {
+      padding: 6rem 4rem;
+      max-width: 800px; margin: 0 auto;
+    }
+    .faq h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 400; color: var(--deep-green);
+      margin-bottom: 3rem; text-align: center;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(122,140,110,0.3);
+    }
+    .faq-question {
+      width: 100%; background: none; border: none;
+      padding: 1.3rem 0; text-align: left; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.95rem;
+      color: var(--text-dark); font-weight: 500;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-question span { color: var(--sage); font-size: 1.2rem; transition: transform 0.3s; }
+    .faq-question.open span { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .faq-answer.open { max-height: 200px; }
+    .faq-answer p {
+      padding-bottom: 1.3rem; color: var(--text-mid);
+      font-size: 0.9rem; line-height: 1.7; font-weight: 300;
+    }
+
+    /* STATS */
+    .stats {
+      padding: 5rem 4rem;
+      background: var(--light-sage);
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; text-align: center;
+      max-width: 100%;
+    }
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; font-weight: 600; color: var(--deep-green);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-mid); margin-top: 0.5rem;
+    }
+
+    /* PRICING */
+    .pricing {
+      padding: 6rem 4rem;
+      text-align: center;
+    }
+    .pricing h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 400; color: var(--deep-green);
+      margin-bottom: 0.5rem;
+    }
+    .pricing-subtitle {
+      color: var(--text-mid); margin-bottom: 3.5rem;
+      font-weight: 300; font-size: 0.95rem;
+    }
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+    }
+    .pricing-card {
+      border: 1px solid rgba(122,140,110,0.3);
+      padding: 2.5rem 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(45,62,47,0.1);
+    }
+    .pricing-card.featured {
+      background: var(--deep-green); border-color: var(--deep-green);
+    }
+    .pricing-card.featured .plan-name,
+    .pricing-card.featured .plan-price,
+    .pricing-card.featured .plan-desc { color: var(--cream); }
+    .plan-name {
+      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--sage); margin-bottom: 1rem;
+    }
+    .plan-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem; font-weight: 600; color: var(--deep-green);
+      margin-bottom: 0.3rem;
+    }
+    .plan-price span { font-size: 1rem; font-weight: 300; }
+    .plan-desc {
+      color: var(--text-mid); font-size: 0.85rem;
+      line-height: 1.6; font-weight: 300;
+      margin-bottom: 2rem;
+    }
+    .btn-plan {
+      display: block; width: 100%;
+      padding: 0.7rem; text-align: center;
+      text-decoration: none; font-size: 0.78rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      border: 1px solid var(--deep-green); color: var(--deep-green);
+      transition: all 0.3s;
+    }
+    .btn-plan:hover { background: var(--deep-green); color: var(--cream); }
+    .pricing-card.featured .btn-plan {
+      border-color: var(--gold); color: var(--gold);
+    }
+    .pricing-card.featured .btn-plan:hover {
+      background: var(--gold); color: var(--deep-green);
+    }
+
+    /* NEWSLETTER */
+    .newsletter {
+      padding: 5rem 4rem; text-align: center;
+      background: var(--warm-brown);
+    }
+    .newsletter h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem; color: var(--cream);
+      font-weight: 300; margin-bottom: 2rem;
+    }
+    .newsletter-form {
+      display: flex; gap: 0; max-width: 480px; margin: 0 auto;
+    }
+    .newsletter-form input {
+      flex: 1; padding: 0.9rem 1.2rem;
+      border: none; background: rgba(245,240,232,0.2);
+      color: var(--cream); font-family: 'Jost', sans-serif;
+      font-size: 0.9rem; outline: none;
+    }
+    .newsletter-form input::placeholder { color: rgba(245,240,232,0.6); }
+    .newsletter-form button {
+      background: var(--deep-green); color: var(--cream);
+      border: none; padding: 0.9rem 1.8rem;
+      font-family: 'Jost', sans-serif; font-size: 0.78rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.3s;
+    }
+    .newsletter-form button:hover { background: var(--text-dark); }
+
+    /* CONTACT */
+    .contact {
+      padding: 6rem 4rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .contact h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 400; color: var(--deep-green);
+      margin-bottom: 2rem;
+    }
+    .contact-info { margin-bottom: 1.5rem; }
+    .contact-info h4 {
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--sage); margin-bottom: 0.4rem;
+    }
+    .contact-info p, .contact-info a {
+      color: var(--text-mid); font-size: 0.9rem; font-weight: 300;
+      text-decoration: none; line-height: 1.6;
+    }
+    .contact-info a:hover { color: var(--sage); }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(122,140,110,0.3);
+      background: transparent; font-family: 'Jost', sans-serif;
+      font-size: 0.9rem; color: var(--text-dark);
+      outline: none; resize: none;
+      transition: border-color 0.3s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: var(--sage); }
+    .contact-form textarea { height: 120px; }
+    .contact-form button {
+      background: var(--deep-green); color: var(--cream);
+      border: none; padding: 0.9rem 2rem;
+      font-family: 'Jost', sans-serif; font-size: 0.8rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; align-self: flex-start;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover { background: var(--warm-brown); }
+
+    /* FOOTER */
+    footer {
+      background: var(--text-dark); color: rgba(245,240,232,0.5);
+      text-align: center; padding: 2rem;
+      font-size: 0.78rem; letter-spacing: 0.05em;
+    }
+    .social-links {
+      display: flex; justify-content: center; gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .social-links a {
+      color: rgba(245,240,232,0.5); text-decoration: none;
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .social-links a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .video-section, .contact { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+      .gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; padding: 1.5rem; }
+      .gallery-item:first-child { grid-column: span 2; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .stats { grid-template-columns: 1fr; padding: 3rem 2rem; }
+      .faq, .pricing, .testimonials { padding: 4rem 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery-item:first-child { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1448935852404-7a38bb46f-h_mouhpyge.jpg" alt="Divine Healn" />
+      <span class="nav-logo-text">Divine Healn</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#healn">Healn</a></li>
+      <li><a href="#oils">Oils</a></li>
+      <li><a href="#services">Services</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Start Healing</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="healn">
+    <p class="hero-eyebrow">Woman-Owned · Natural · Holistic</p>
+    <h1><strong>Holistic</strong><br>Wellness</h1>
+    <p>Transform your health with natural remedies and healing practices rooted in the gifts of nature.</p>
+    <a href="#about" class="btn-primary">Join Us</a>
+  </section>
+
+  <!-- VIDEO + PHILOSOPHY -->
+  <section class="video-section" id="about">
+    <div>
+      <h2>Nurturing Mind and Body</h2>
+      <p>At Divine Healn, we are passionate about nurturing holistic health through an array of natural products and uplifting services. Our Woman-Owned Small Business (WOSB) is dedicated to bringing the gifts of nature to your well-being.</p>
+      <p>From carefully crafted herb mixtures and potent tinctures to revitalizing oils, we provide solutions that harmonize your body and spirit. Our services, including rejuvenating reiki sessions and harmonious sound frequency healing, are designed to promote deep relaxation and inner peace.</p>
+      <p>Join our community of wellness enthusiasts and discover a sanctuary of healing. Together, let's cultivate health and happiness for a brighter tomorrow.</p>
+    </div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/n3wDt57wa8I?rel=0&mute=1&showinfo=0&autoplay=1&loop=1&playlist=n3wDt57wa8I" allow="autoplay; encrypted-media" allowfullscreen title="Divine Healn"></iframe>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="oils">
+    <div class="gallery-item">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1611073761742-bce90ccd60ae.jpeg" alt="Healing" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1692876339227-e74c5293a3e6.jpeg" alt="Oils" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1532028205213-4c4fa81306d4.jpeg" alt="Herbs" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1638774907426-4203b90e37da.jpeg" alt="Tinctures" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1603129624917-3c579e864025.jpeg" alt="Wellness" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1553275991-b6ba99f234e1.jpeg" alt="Nature" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1514733670139-4d87a1941d55.jpeg" alt="Healing" />
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>☁️ Best Offers</span><span>☁️ Free Delivery</span><span>☁️ Perfect Design</span><span>☁️ Comfort</span><span>☁️ Support 24/7</span><span>☁️ Vibes</span>
+      <span>☁️ Best Offers</span><span>☁️ Free Delivery</span><span>☁️ Perfect Design</span><span>☁️ Comfort</span><span>☁️ Support 24/7</span><span>☁️ Vibes</span>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="services">
+    <h2>Cheers!</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"The tinctures have transformed my wellness routine!"</p>
+        <div class="testimonial-author">
+          <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1513207565459-d7f36bfa1222.jpeg" alt="Emily H." />
+          <strong>Emily H.</strong>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Reiki sessions here are truly life-changing and so grounding."</p>
+        <div class="testimonial-author">
+          <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1545386673-7723f55e5490.jpeg" alt="Sophia R." />
+          <strong>Sophia R.</strong>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"I love the oils! They bring serenity into my life."</p>
+        <div class="testimonial-author">
+          <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1536763225213-b5592b525630.jpeg" alt="Maya L." />
+          <strong>Maya L.</strong>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Divine Healn helped align my energy beautifully!"</p>
+        <div class="testimonial-author">
+          <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1692558588242-57cec1e32bba.jpeg" alt="Ava J." />
+          <strong>Ava J.</strong>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"The sound healing sessions brought me peace and clarity."</p>
+        <div class="testimonial-author">
+          <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1615065591984-6800446436a1.jpeg" alt="Luna K." />
+          <strong>Luna K.</strong>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Their herb mixtures are a delight; I feel amazing!"</p>
+        <div class="testimonial-author">
+          <img src="https://r.mobirisesite.com/2659446/assets/images/photo-1676385901160-31e1b9e1c0c7.jpeg" alt="Zoe T." />
+          <strong>Zoe T.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Common Inquiries</h2>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">What products do you offer? <span>+</span></button>
+      <div class="faq-answer"><p>We specialize in herb mixtures, tinctures, oils, and wellness services.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">How can I book a service? <span>+</span></button>
+      <div class="faq-answer"><p>Visit our website to book services online easily.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Are your products organic? <span>+</span></button>
+      <div class="faq-answer"><p>Absolutely, we use only organic and natural ingredients.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Do you have a loyalty program? <span>+</span></button>
+      <div class="faq-answer"><p>Yes! We offer rewards for returning customers.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">What is your return policy? <span>+</span></button>
+      <div class="faq-answer"><p>Returns accepted within 30 days if unopened.</p></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div>
+      <div class="stat-number">10K</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
+    <div>
+      <div class="stat-number">50+</div>
+      <div class="stat-label">Herbal Products</div>
+    </div>
+    <div>
+      <div class="stat-number">200</div>
+      <div class="stat-label">Healing Sessions</div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+    <h2>Membership Plans</h2>
+    <p class="pricing-subtitle">Choose the path that resonates with your healing journey.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="plan-name">Basic Healing</div>
+        <div class="plan-price">$4.99<span>/mo</span></div>
+        <p class="plan-desc">Access our basic herbal remedies and guides to start your path.</p>
+        <a href="#" class="btn-plan">Get Started Now</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="plan-name">Premium Balance</div>
+        <div class="plan-price">$19.99<span>/mo</span></div>
+        <p class="plan-desc">Enjoy all herbal products and exclusive healing workshops for members.</p>
+        <a href="#" class="btn-plan">Get Started Now</a>
+      </div>
+      <div class="pricing-card">
+        <div class="plan-name">Expert Wellness</div>
+        <div class="plan-price">$39.99<span>/mo</span></div>
+        <p class="plan-desc">One-on-one sessions with experts plus all product benefits included.</p>
+        <a href="#" class="btn-plan">Get Started Now</a>
+      </div>
+      <div class="pricing-card">
+        <div class="plan-name">Ultimate Healing</div>
+        <div class="plan-price">$99.99<span>/mo</span></div>
+        <p class="plan-desc">Comprehensive access to all services, products, and retreats throughout the year.</p>
+        <a href="#" class="btn-plan">Get Started Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Join Our Healing Community Today</h2>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email address" />
+      <button type="button">Subscribe Now</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div>
+      <h2>Get In Touch</h2>
+      <div class="contact-info">
+        <h4>Phone</h4>
+        <a href="tel:9039904123"><p>(903) 990-4123</p></a>
+      </div>
+      <div class="contact-info">
+        <h4>Email</h4>
+        <a href="mailto:info@divinehealn.com">info@divinehealn.com</a>
+      </div>
+      <div class="contact-info">
+        <h4>Address</h4>
+        <p>302 Talty Rd. Terrell, Texas 75160</p>
+      </div>
+      <div class="contact-info">
+        <h4>Business Hours</h4>
+        <p>Mon–Fri: 9am – 5pm<br>Sat–Sun: 10am – 4pm</p>
+      </div>
+    </div>
+    <div>
+      <h2>Send Message</h2>
+      <div class="contact-form">
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="button">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+    <p>© 2026 Divine Healn. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>
